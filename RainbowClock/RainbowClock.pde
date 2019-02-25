@@ -8,7 +8,7 @@ color rcolor() {
 }
 
 void setup() {
-  size(600, 600);
+  //size(600, 600);
   background(0);
   r = random(a, b);
 }
@@ -29,24 +29,24 @@ void draw() {
   ellipse(0, 0, width/r, width/r);
   r = (r * dampingLevel + random(a, b)) / (dampingLevel + 1);
   
-  push();
+  pushMatrix();
   rotate(map(hr % 12, 0, 12, 0, TWO_PI) + map(mn, 0, 60, 0, TWO_PI / 60) + map(sc, 0, 60, 0, TWO_PI / 360));
   stroke(rcolor());
   strokeWeight(6);
   line(0, 0, 50, 0);
-  pop();
+  popMatrix();
   
-  push();
+  pushMatrix();
   rotate(map(mn, 0, 60, 0, TWO_PI) + map(sc, 0, 60, 0, TWO_PI / 60));
   stroke(rcolor());
   strokeWeight(6);
   line(0, 0, 80, 0);
-  pop();
+  popMatrix();
   
-  push();
+  pushMatrix();
   rotate(map(sc, 0, 60, 0, TWO_PI));
   stroke(rcolor());
   strokeWeight(6);
   line(0, 0, 130, 0);
-  pop();
+  popMatrix();
 }
