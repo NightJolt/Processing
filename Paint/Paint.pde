@@ -178,6 +178,7 @@ void drawToolBar() {
   textSize(20);
   textAlign(CENTER, CENTER);
   text("DELETE", width / 2, toolBarH / 2 - 5);
+  if (toolClickables.size() == 0)
   toolClickables.add(
     new area(
       0, y, width, height
