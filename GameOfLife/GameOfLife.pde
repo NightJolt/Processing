@@ -29,6 +29,14 @@ void draw() {
     takeStep();
   }
   
+  /*
+  if (mousePressed) {
+    listen();
+  } if (!keyPressed && frame % 30 == 0) {
+    takeStep();
+  }
+  */
+  
   drawMap();
   drawGrid();
 }
