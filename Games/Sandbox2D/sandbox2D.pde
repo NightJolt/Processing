@@ -14,14 +14,17 @@ void setup() {
     }
   }
   
-  for (int x=0;x<64;x++) {
+  /*for (int x=0;x<64;x++) {
     final int altitude = floor(noise((float)x / 20) * 10) + 10;
     for (int y=altitude;y<altitude+4;y++) {
       setBlock(new Dirt(), x, y);
     }
-  }
+  }*/
   
-  //chunks[0][0].fillChunk(new Dirt());
+  chunks[0][0].fillChunk(new Dirt());
+  chunks[1][0].fillChunk(new Dirt());
+  chunks[0][1].fillChunk(new Dirt());
+  chunks[1][1].fillChunk(new Dirt());
 }
 
 void draw() {
